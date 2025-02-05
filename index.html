@@ -56,6 +56,43 @@
   <link rel="stylesheet" href="assets/css/twentytwenty.css">
   <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* mobile view */
+    @media (max-width: 767px) {
+      .aboutus-mobile{
+        display: block;
+      }
+      .aboutus-desk{
+        display: none;
+      }
+      .mobile-btn{
+        text-align: center;
+      }
+      .arrow-btns{
+        display: none !important;
+      }
+      .title-area{
+        text-align: center;
+      }
+      .logo{
+        width: 250px;
+      }
+  }
+  /* desktop view */
+    @media (min-width: 767px) {
+      .aboutus-mobile{
+        display: none;
+      }
+      .aboutus-desk{
+        display: block;
+      }
+      .logo{
+        width: 300px;
+      }
+  }
+
+  </style>
 </head>
 
 <body>
@@ -249,8 +286,8 @@
             <div class="row justify-content-between align-items-center gx-sm-0">
               <div class="col-auto">
                 <div class="header-logo2">
-                  <a href="index.html"><img src="assets/img/new-img/prasad-logo.png" alt="Garix"
-                      style="max-width: 300px;" class="logo"></a>
+                  <a href="index.html"><img  src="assets/img/new-img/prasad-logo.png" alt="Garix"
+                       class="logo"></a>
                 </div>
               </div>
               <div class="col-auto">
@@ -532,6 +569,10 @@
   <section class="about--layout1 space-top space-bottom">
     <div class="container">
       <div class="row align-items-center ">
+       <div class="aboutus-mobile text-center">
+        <span class="sec-subtitle style2 text-center">About Us</span>
+        <h2 class="sec-title text-center">Prasad Eye Hospital – Vision Care with Excellence and Compassion.</h2>
+       </div>
         <div class="col-lg-6 mb-30">
           <div class="about-img2">
             <div class="element2"></div>
@@ -555,9 +596,11 @@
           </div>
         </div>
         <div class="col-lg-6 mb-30">
-          <span class="sec-subtitle style2">About Us</span>
+          <div class="aboutus-desk">
+            <span class="sec-subtitle style2">About Us</span>
           <h2 class="sec-title">Prasad Eye Hospital – Vision Care with Excellence and Compassion.</h2>
-          <p>Prasad Eye Hospital is dedicated to providing exceptional eye care with advanced technology and a
+          </div> 
+          <p style="text-align: justify;">Prasad Eye Hospital is dedicated to providing exceptional eye care with advanced technology and a
             patient-focused approach. Our experienced team of ophthalmologists and specialists offer comprehensive
             services, including diagnostics, treatments, and surgeries, ensuring optimal vision health for all. With a
             commitment to excellence, we strive to deliver personalized care in a compassionate environment. </p>
@@ -576,7 +619,9 @@
                 Days a Week</h3>
             </div> -->
           </div>
-          <a href="service-details.html" class="vs-btn">Read more <span class="vs-btn__bar"></span></a>
+          <div class="mobile-btn">
+            <a href="service-details.html" class="vs-btn">Read more <span class="vs-btn__bar"></span></a>
+          </div>
           <!-- <a href="service-details.html" class="vs-btn">Learn More <span class="vs-btn__bar"></span></a> -->
 
         </div>
@@ -599,7 +644,7 @@
         </div>
         <div class="col-xl-7 col-lg-5 col-auto">
           <div class="title-area">
-            <div class="d-flex justify-content-end align-items-center gap-2">
+            <div class="d-flex justify-content-end align-items-center gap-2 arrow-btns">
               <button class="icon-btn" data-slick-prev=".service-carousel">
                 <i class="fal fa-long-arrow-left"></i>
               </button>
@@ -1128,15 +1173,19 @@
       </div>
     </div>
   </section> -->
-  <section class="team--details space-top space-bottom">
+  <section class="team--details space-top">
     <div class="container">
+      <div class="col-12 mb-30 title-area aboutus-mobile">
+        <h2 class="tdetails-name">Dr. Shiva Prasad Kakarla</h2>
+        <span class="tdetails-desig">MBBS, DOMS. DNB.</span>
+      </div>
       <div class="row gx-60">
         <div class="col-lg-5 mb-50">
           <img class="w-100" src="assets/img/team/team-details-d-1.jpg" alt="Team Details">
         </div>
         <div class="col-lg-7 mb-50">
           <div class="row">
-            <div class="col-12 mb-30">
+            <div class="col-12 mb-30 aboutus-desk">
               <h2 class="tdetails-name">Dr. Shiva Prasad Kakarla</h2>
               <span class="tdetails-desig">MBBS, DOMS. DNB.</span>
             </div>
