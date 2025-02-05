@@ -92,7 +92,7 @@ Version: 1.0.0
   --icon-font: "Font Awesome 5 Pro";
   --main-container: 1220px;
   --container-gutters: 30px;
-  --section-space: 120px;
+  --section-space: 80px;
   --section-space-mobile: 80px;
   --section-title-space: 80px;
   --ripple-ani-duration: 5s;
@@ -5980,7 +5980,7 @@ a.text-theme:hover,
   text-decoration: none;
 }
 .footer--layout1 .overlay {
-  background: linear-gradient(90deg, #01133c 57.39%, rgba(1, 19, 60, 0) 122.86%);
+  background: linear-gradient(90deg, #01133ca0 57.39%, rgba(1, 19, 60, 0) 122.86%);
   opacity: 0.95;
   z-index: -1;
 }
@@ -8695,7 +8695,7 @@ blockquote.vs-quote .quote-author {
   background-color: transparent;
 }
 .process-block--style2:nth-child(even) {
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 @media (max-width: 991px) {
   .process-block--style2:nth-child(even) {
