@@ -4,7 +4,7 @@ Template Name: TechBiz
 Template URL: https://html.vecuro.com/techbiz
 Description: TechBiz - IT Solution & Service HTML Template
 Author: vecuro
-Author URI: https://themeforest.net/user/vecuro_themes
+Author URI: #user/vecuro_themes
 Version: 1.0.0
 */
 /*=================================
@@ -1639,6 +1639,12 @@ textarea.is-invalid {
   }
   .vs-mobile-menu > ul {
     padding: 0 20px;
+  }
+}
+
+@media(max-width:767px){
+  .mob-logo{
+    width: 250px !important;
   }
 }
 /*=================================
