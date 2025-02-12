@@ -3368,12 +3368,12 @@ a.text-theme:hover,
 }
 
 .overlay3 {
-  background: linear-gradient(90deg, #01133c 41.07%, rgba(1, 19, 60, 0) 100%);
+  background: linear-gradient(90deg, #15d0cf36 41.07%, rgba(1, 19, 60, 0) 100%);
   opacity: 0.9;
 }
 
 .overlay4 {
-  background-color: var(--title-color);
+  background-color: #01133c40;
   opacity: 0.85;
 }
 
@@ -4877,7 +4877,7 @@ a.text-theme:hover,
 }
 .main-menu > ul > li > a,
 .menu-style2 > ul > li > a {
-  padding: 47px 0;
+  padding: 35px 0;
 }
 .main-menu > ul > li > a .new-label,
 .menu-style2 > ul > li > a .new-label {
@@ -5671,7 +5671,7 @@ a.text-theme:hover,
 
 .header-layout1 .header-top,
 .header-layout3 .header-top {
-  background-color: var(--title-color);
+  background-color: #13b7b6;
   padding: 12px 0;
 }
 

@@ -350,6 +350,43 @@
         Header Area
     ==============================-->
     <header class="vs-header header-layout1">
+    <div class="header-top d-none d-lg-block">
+      <div class="container">
+        <div class="row justify-content-between ">
+          <div class="col-auto">
+            <div class="header-infos">
+              <div class="header-info">
+                <div class="header-info_icon"><i class="fas fa-clock"></i></div>
+                <div class="media-body">
+                  <span class="header-info_label">We'are Open: 09AM - 08PM</span>
+                </div>
+              </div>
+              <div class="header-info">
+                <div class="header-info_icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="media-body">
+                  <a class="header-info_label" href="tel:+91- 9844165919">+91- 9844165919</a>
+                </div>
+              </div>
+              <div class="header-info">
+                <div class="header-info_icon"><i class="fas fa-envelope"></i></div>
+                <div class="media-body">
+                  <a class="header-info_label" href="spkakarla@yahoo.co.in">spkakarla@yahoo.co.in</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="header-social style-white">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <!-- <a href="themeforest.net"><i class="fab fa-behance"></i></a> -->
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
       <div class="sticky-wrapper header-bottom2">
         <div class="sticky-active">
           <div class="container">
@@ -493,7 +530,7 @@
         </div>
       </div>
       <!-- Header Top -->
-      <div class="d-none d-lg-block">
+      <!-- <div class="d-none d-lg-block">
         <div class="container">
           <div class="row gx-0">
             <div class="col-lg-4">
@@ -525,7 +562,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </header>
   <!--==============================
     Breadcumb
@@ -584,38 +621,41 @@
               </div>
             </div>
           </div>
-          <hr class="divider2">
-          <div class="social-style1 style3">
+          <!-- <hr class="divider2"> -->
+          <!-- <div class="social-style1 style3">
             <span class="title">Follow Us:</span>
             <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="#" target="_blank"><i class="fab fa-pinterest-p"></i></a>
             <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          </div>
+          </div> -->
         </div>
         <div class="col-lg-7 mb-30">
-          <form action="mail.php" method="post" class="form-style3 ajax-contact">
-            <h3 class="sec-title">Send Us a Message</h3>
+          <form id="whatsappForm" class="form-style3">
+            <h3 class="sec-title" style="color: #00B1B0;">Send Us a Message</h3>
             <div class="row">
-              <div class="col-md-6 form-group">
-                <input name="fname" type="text" class="form-control" placeholder="First Name" required="">
-              </div>
-              <div class="col-md-6 form-group">
-                <input name="lname" type="text" class="form-control" placeholder="Last Name" required="">
-              </div>
-              <div class="col-12 form-group">
-                <input name="email" type="email" class="form-control" placeholder="Email Address" required="">
-              </div>
-              <div class="col-12  form-group">
-                <textarea name="message" class="form-control" placeholder="Message" required=""></textarea>
-              </div>
-              <div class="col-12 form-group">
-                <button class="vs-btn" type="submit">
-                  Send Message
-                </button>
-              </div>
+                <div class="col-md-6 form-group">
+                    <input name="fname" type="text" class="form-control" placeholder="First Name" required="">
+                </div>
+                <div class="col-md-6 form-group">
+                    <input name="lname" type="text" class="form-control" placeholder="Last Name" required="">
+                </div>
+                <div class="col-md-6 form-group">
+                    <input name="email" type="email" class="form-control" placeholder="Email Address" required="">
+                </div>
+                <div class="col-md-6 form-group">
+                    <input name="phone" type="number" class="form-control" placeholder="Phone Number " required="">
+                </div>
+                <div class="col-12 form-group">
+                    <textarea name="message" class="form-control" placeholder="Message" required=""></textarea>
+                </div>
+                <div class="col-12 form-group">
+                    <button class="vs-btn" type="submit">
+                        Send Message 
+                    </button>
+                </div>
             </div>
-          </form>
+        </form>
           <p class="form-messages mb-0 mt-3"></p>
         </div>
       </div>
@@ -787,6 +827,35 @@
     ============================== -->
   <!-- Jquery -->
   <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+
+  <script>
+    document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        // Get form values
+        let fname = document.querySelector('input[name="fname"]').value;
+        let lname = document.querySelector('input[name="lname"]').value;
+        let email = document.querySelector('input[name="email"]').value;
+        let phone = document.querySelector('input[name="phone"]').value;
+        let message = document.querySelector('textarea[name="message"]').value;
+    
+        // Construct the WhatsApp message
+        let whatsappMessage = `Hello, my name is ${fname} ${lname}. 
+        Email: ${email}
+        Phone: ${phone}
+        Message: ${message}`;
+    
+        // Encode the message for URL
+        let encodedMessage = encodeURIComponent(whatsappMessage);
+    
+        // Change this to your WhatsApp business number (with country code, e.g., +91 for India)
+        let whatsappNumber = "9844165919"; 
+    
+        // Open WhatsApp with the pre-filled message
+        let whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+        window.open(whatsappURL, "_blank");
+    });
+    </script>
   <!-- Jquery UI -->
   <script src="assets/js/jquery-ui.min.js"></script>
   <!-- Slick Slider -->
