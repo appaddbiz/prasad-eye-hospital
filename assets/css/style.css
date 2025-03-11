@@ -1468,7 +1468,8 @@ textarea.is-invalid {
   padding-top: 40px;
   display: block;
   text-align: center;
-  background-color: var(--theme-color);
+  background-color: #fff;
+    border-bottom: 2px solid #00b1b0;
 }
 .vs-menu-wrapper .mobile-logo svg {
   max-width: 185px;
@@ -12929,5 +12930,61 @@ span.select2-selection.select2-selection--single:focus {
   font-size: 14px;
   margin: 0 0 10px 0;
   padding: 5px 0;
+}
+
+
+
+@media (max-width: 767px) {
+  .aboutus-mobile {
+    display: block;
+  }
+
+  .aboutus-desk {
+    display: none;
+  }
+
+  .mobile-btn {
+    text-align: center;
+  }
+
+  .arrow-btns {
+    display: none !important;
+  }
+
+  .title-area {
+    text-align: center;
+  }
+
+  .logo {
+    width: 250px;
+  }
+}
+
+/* desktop view */
+@media (min-width: 767px) {
+  .aboutus-mobile {
+    display: none;
+  }
+
+  .aboutus-desk {
+    display: block;
+  }
+
+  .logo {
+    width: 300px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .desk-banner {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-banner {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
