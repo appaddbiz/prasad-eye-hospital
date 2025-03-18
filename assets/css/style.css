@@ -8787,7 +8787,7 @@ blockquote.vs-quote .quote-author {
   background-color: transparent;
   border: none;
   padding: 25px 0;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   font-family: var(--title-font);
   color: var(--theme-color);
@@ -8979,7 +8979,7 @@ blockquote.vs-quote .quote-author {
     top: 0;
   }
   .accordion-style1 .accordion-button {
-    font-size: 20px;
+    font-size: 18px;
   }
   .accordion-style1 .accordion-body {
     font-size: 14px;
