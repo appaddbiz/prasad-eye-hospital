@@ -12981,10 +12981,15 @@ span.select2-selection.select2-selection--single:focus {
     display: none;
   }
 }
-
+@media (min-width: 767px) {
+  .desk-view {
+    display: none;
+    }
+   }
 @media (min-width: 769px) {
   .mobile-banner {
     display: none;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
