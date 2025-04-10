@@ -12976,15 +12976,16 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .desk-banner {
     display: none;
   }
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .desk-view {
     display: none;
     }
+    
    }
 @media (min-width: 769px) {
   .mobile-banner {
